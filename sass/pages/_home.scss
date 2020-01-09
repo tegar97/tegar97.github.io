@@ -1,0 +1,49 @@
+.section-about {
+  padding: 20rem 0;
+  margin-top: -12rem;
+  @include responsive(tablet-portait) {
+    padding: 15rem 0;
+  }
+}
+.section-fitur {
+  padding: 20rem 0;
+
+  background: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.83),
+      rgba(40, 180, 133, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-repeat: none;
+  background-size: cover;
+  transform: skewY(-7deg);
+}
+.section-fitur > * {
+  transform: skewY(7deg);
+  @include responsive(tablet-portait) {
+    padding: 15rem 0 5rem 0;
+  }
+}
+
+.section-tours {
+  padding: 20rem 0;
+}
+.section-testimonial {
+  padding: 20rem 0;
+
+  position: relative;
+  @include responsive(tablet-portait) {
+    padding: 15rem 0 10rem 0;
+  }
+}
+.section-booking {
+  padding: 15rem 0;
+  background: linear-gradient(
+    to right bottom,
+    $warna-hijau-muda,
+    $warna-hijau-tua
+  );
+  @include responsive(tablet-portait) {
+    padding: 10rem 0;
+  }
+}

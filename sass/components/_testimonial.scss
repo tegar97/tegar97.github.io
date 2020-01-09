@@ -1,0 +1,49 @@
+.testimonial{
+   
+    width: 75%;
+    margin: 0 auto;
+    background: $warna-putih;
+    font-size: 1.6rem;
+   padding: 6rem;
+   padding-left: 9rem;
+   box-shadow: 0 3rem 6rem rgba($warna-hitam,.1);
+   transform: skewX(-12deg);
+   position: relative;
+   
+    & > * {
+        transform: skewX(12deg);
+    }
+   &__shape{
+       height: 13rem;
+       width: 13rem;
+      
+       float: left;
+       clip-path: circle(50% at 50% 50%);
+       shape-outside: circle(50% at 50% 50%);
+       transform: translate(-4rem) skewX(12deg);;
+
+   }
+   &__gambar{
+       width: 100%;
+       height: 100%;
+       transform: scale(1.4);
+       transition: 0.5s all;
+   }
+   &__caption{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -20%);
+       color: $warna-putih;
+       transition: transform .5s;
+       opacity: 0;
+   }
+   &:hover &__caption{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+   }
+   &:hover &__gambar{
+       transform: scale(1);
+       filter: blur(5px)
+   }
+}

@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px; /* 10px = 1rem */
+
+    // 1 rem untuk ukuran Tablet-Landscape
+    @include responsive(tablet-landcape){
+        font-size: 9px;//1 rem 9px
+    }
+    // 1 rem untuk Tablet-Portait
+    @include responsive(tablet-portait){
+        font-size: 8px; //1rem 8px
+    }
+    // 1rem untuk Hp
+    @include responsive(phone){
+        font-size: 5px;//1rem 5px
+    }
+     
+}

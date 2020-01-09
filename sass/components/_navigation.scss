@@ -1,0 +1,157 @@
+.navigation{
+    
+   
+    &__button{
+        display: inline-block;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 3.5rem;
+        right: 3.5rem;
+        background: white;
+        z-index: 200;
+        border-radius: 100%;
+        box-shadow: 0 1rem 2rem rgba($warna-hitam,.3);
+        cursor: pointer;
+        text-align: center;
+
+
+        
+        
+
+    }
+    &__background{
+        display: inline-block;
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        background: radial-gradient($warna-hijau-muda, $warna-hijau-tua);
+       
+        z-index: 100;
+        top: 4rem;
+        right: 4rem;
+        border-radius: 100%;
+        transition: 0.9s all cubic-bezier(0.77, 0, 0.175, 1)  ;
+
+
+       
+
+    }
+   
+    &__nav{
+        position: fixed;
+       
+        z-index: 150;
+        height: 100vh;
+        width: 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.9s all;
+
+
+        
+
+    }
+    &__list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: center;
+        
+        
+
+    }
+    &__item{
+        margin: 1rem;
+        
+
+
+
+    }
+    &__link{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 3rem;
+        color: $warna-putih;
+        font-weight: 300;
+        display: inline-block;
+        padding : 1rem 2rem;   
+        background: orange;
+        background: linear-gradient(120deg , transparent 0% , transparent 50%, white 50%);
+        background-position: 0%;
+        background-size: 230%;
+        transition: 0.5s all;
+        
+      
+      
+      &:hover{
+          background-position: 100%;
+          color: $warna-hijau-muda;
+    
+          
+      }
+     
+
+    }
+
+    // ketika Di Check Maka Akan Memilih Elemen &__background dan mengscale background
+    &__checkbox:checked ~ &__background{
+        transform: scale(80);
+        background: radial-gradient($warna-hijau-muda, $warna-hijau-tua);
+        
+       
+    }
+    &__checkbox:checked ~ &__nav{
+        opacity: 1;
+        visibility: visible;
+        
+        width: 100%;
+    }
+
+    // icon
+    &__icon{
+        width: 3rem;
+        height: 2px;
+        display: inline-block;
+        background: #333;
+        position: relative;
+        margin-top: 3.5rem;
+        
+        
+        &::after,
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background: #333;
+            position: absolute;
+            left: 0;
+            transition: 0.3s all;
+
+        }
+        &::before{
+            top: -1rem;
+            background: #333;
+        }
+        &::after{
+            top: 1rem;
+            background: #333;
+        }
+    }
+    &__checkbox:checked ~ &__button &__icon{
+       background: transparent;
+
+       &::after{
+           transform: rotate(135deg);
+           top: 0;
+       }
+       &::before{
+           top: 0;
+           transform: rotate(-135deg);
+    }
+    }
+
+}

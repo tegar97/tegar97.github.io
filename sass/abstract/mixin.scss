@@ -1,0 +1,35 @@
+@mixin clearfix{
+    &::after{
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin responsive-phone{
+    @media(max-width:600px){
+        @content;
+    }
+}
+
+@mixin responsive($perangkat){
+    // untuk perangkat phone
+    @if $perangkat == phone{
+        @media (max-width: 600px){
+            @content;
+        }
+    }
+    // untuk perangkat tablet portait
+    @if $perangkat == tablet-portait{
+        @media (max-width: 900px){
+            @content;
+        }
+    }
+    // untuk Perangkat Tablet Lanscape
+    @if $perangkat == tablet-landscape{
+        @media (max-width: 1200px){
+            @content;
+        }
+    }
+    
+}

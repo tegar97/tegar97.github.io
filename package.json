@@ -1,0 +1,14 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "konversi-sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Tegar Akmal",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
